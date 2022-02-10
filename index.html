@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="./pages/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto Russia</title>
+</head>
+
+<body class="body">
+    <div class="page">
+        <header class="header">
+            <img class="header__logo" src="./images/Vector.svg" alt="Логотип место">
+        </header>
+        <main class="main">
+            <section class="profile">
+                <img class="profile__avatar" src="./images/image.jpg" alt="Жак-Ив Кусто">
+                <div class="profile__profile-info">
+                    <div class="profile__block">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <button class="profile__edit-button"></button>
+                    </div>
+                    <h2 class="profile__description">Исследователь океана</h2>
+                </div>
+                <button class="profile__add-button"></button>
+            </section>
+            <section class="elements">
+                <div class="elements__element">
+                    <img class="elements__item" src="./images/krsk.jpg" alt="Красноярск">
+                    <div class="elements__grid-block">
+                        <h2 class="elements__text">Красноярск</h2>
+                        <button class="elements__like"></button>
+                    </div>
+                </div>
+                <div class="elements__element">
+                    <img class="elements__item" src="./images/msc.jpg" alt="Москва">
+                    <div class="elements__grid-block">
+                        <h2 class="elements__text">Москва</h2>
+                        <button class="elements__like"></button>
+                    </div>
+                </div>
+                <div class="elements__element">
+                    <img class="elements__item" src="./images/pskov.jpg" alt="Псков">
+                    <div class="elements__grid-block">
+                        <h2 class="elements__text">Псков</h2>
+                        <button class="elements__like"></button>
+                    </div>
+                </div>
+                <div class="elements__element">
+                    <img class="elements__item" src="./images/ris-1-krasnaja-poljana.jpg" alt="Красная поляна">
+                    <div class="elements__grid-block">
+                        <h2 class="elements__text">Красная Поляна</h2>
+                        <button class="elements__like"></button>
+                    </div>
+                </div>
+                <div class="elements__element">
+                    <img class="elements__item" src="./images/sochi.jpg" alt="Сочи">
+                    <div class="elements__grid-block">
+                        <h2 class="elements__text">Сочи</h2>
+                        <button class="elements__like"></button>
+                    </div>
+                </div>
+                <div class="elements__element">
+                    <img class="elements__item" src="./images/spb.jpg" alt="Санкт-Петербург">
+                    <div class="elements__grid-block">
+                        <h2 class="elements__text">Санкт-Петербург</h2>
+                        <button class="elements__like"></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">© 2022 Mesto Russia</p>
+        </footer>
+        <section class="popup">
+            <button class="popup__close"></button>
+            <form class="popup__container">
+                <h2 class="popup__profile">Редактировать профиль</h2>
+                <input class="popup__name" type="text" value="Жак-Ив Кусто" placeholder="Имя">
+                <input class="popup__text" type="text" value="Исследователь океана" placeholder="О себе">
+                <button class="popup__button">Сохранить</button>
+            </form>
+        </section>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

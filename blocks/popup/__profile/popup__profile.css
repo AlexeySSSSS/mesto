@@ -1,0 +1,23 @@
+.popup__profile {
+    min-width: 330px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 34px;
+    margin-bottom: 48px;
+    margin-right: auto;
+    margin-left: 36px;
+}
+
+@media screen and (max-width: 600px) {
+    .popup__profile {
+        min-width: 238px;
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 25px;
+        margin-bottom: 75px;
+        margin-left: 22px;
+    }
+}
