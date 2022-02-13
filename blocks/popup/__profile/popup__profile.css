@@ -11,7 +11,7 @@
     margin-left: 36px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
     .popup__profile {
         min-width: 238px;
         font-size: 18px;

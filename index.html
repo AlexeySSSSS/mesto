@@ -26,48 +26,48 @@
                 <button class="profile__add-button"></button>
             </section>
             <section class="elements">
-                <div class="elements__element">
-                    <img class="elements__item" src="./images/krsk.jpg" alt="Красноярск">
-                    <div class="elements__grid-block">
-                        <h2 class="elements__text">Красноярск</h2>
-                        <button class="elements__like"></button>
+                <article class="elements__element card">
+                    <img class="card__item" src="./images/krsk.jpg" alt="Красноярск">
+                    <div class="card__grid-block">
+                        <h2 class="card__text">Красноярск</h2>
+                        <button class="card__like"></button>
                     </div>
-                </div>
-                <div class="elements__element">
-                    <img class="elements__item" src="./images/msc.jpg" alt="Москва">
-                    <div class="elements__grid-block">
-                        <h2 class="elements__text">Москва</h2>
-                        <button class="elements__like"></button>
+                </article>
+                <article class="elements__element card">
+                    <img class="card__item" src="./images/msc.jpg" alt="Москва">
+                    <div class="card__grid-block">
+                        <h2 class="card__text">Москва</h2>
+                        <button class="card__like"></button>
                     </div>
-                </div>
-                <div class="elements__element">
-                    <img class="elements__item" src="./images/pskov.jpg" alt="Псков">
-                    <div class="elements__grid-block">
-                        <h2 class="elements__text">Псков</h2>
-                        <button class="elements__like"></button>
+                </article>
+                <article class="elements__element card">
+                    <img class="card__item" src="./images/pskov.jpg" alt="Псков">
+                    <div class="card__grid-block">
+                        <h2 class="card__text">Псков</h2>
+                        <button class="card__like"></button>
                     </div>
-                </div>
-                <div class="elements__element">
-                    <img class="elements__item" src="./images/ris-1-krasnaja-poljana.jpg" alt="Красная поляна">
-                    <div class="elements__grid-block">
-                        <h2 class="elements__text">Красная Поляна</h2>
-                        <button class="elements__like"></button>
+                </article>
+                <article class="elements__element card">
+                    <img class="card__item" src="./images/ris-1-krasnaja-poljana.jpg" alt="Красная поляна">
+                    <div class="card__grid-block">
+                        <h2 class="card__text">Красная Поляна</h2>
+                        <button class="card__like"></button>
                     </div>
-                </div>
-                <div class="elements__element">
-                    <img class="elements__item" src="./images/sochi.jpg" alt="Сочи">
-                    <div class="elements__grid-block">
-                        <h2 class="elements__text">Сочи</h2>
-                        <button class="elements__like"></button>
+                </article>
+                <article class="elements__element card">
+                    <img class="card__item" src="./images/sochi.jpg" alt="Сочи">
+                    <div class="card__grid-block">
+                        <h2 class="card__text">Сочи</h2>
+                        <button class="card__like"></button>
                     </div>
-                </div>
-                <div class="elements__element">
-                    <img class="elements__item" src="./images/spb.jpg" alt="Санкт-Петербург">
-                    <div class="elements__grid-block">
-                        <h2 class="elements__text">Санкт-Петербург</h2>
-                        <button class="elements__like"></button>
+                </article>
+                <article class="elements__element card">
+                    <img class="card__item" src="./images/spb.jpg" alt="Санкт-Петербург">
+                    <div class="card__grid-block">
+                        <h2 class="card__text">Санкт-Петербург</h2>
+                        <button class="card__like"></button>
                     </div>
-                </div>
+                </article>
             </section>
         </main>
         <footer class="footer">
@@ -75,11 +75,11 @@
         </footer>
         <section class="popup">
             <button class="popup__close"></button>
-            <form class="popup__container">
+            <form class="popup__container" name="form">
                 <h2 class="popup__profile">Редактировать профиль</h2>
-                <input class="popup__name" type="text" value="Жак-Ив Кусто" placeholder="Имя">
-                <input class="popup__text" type="text" value="Исследователь океана" placeholder="О себе">
-                <button class="popup__button">Сохранить</button>
+                <input class="popup__input popup__input_type_name" type="text" name="name" placeholder="Имя">
+                <input class="popup__input popup__input_type_job" type="text" name="info" placeholder="О себе">
+                <button class="popup__button" type="submit">Сохранить</button>
             </form>
         </section>
     </div>

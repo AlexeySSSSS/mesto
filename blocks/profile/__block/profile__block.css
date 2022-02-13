@@ -3,7 +3,7 @@
     grid-template-columns: auto auto;
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 918px) {
     .profile__block {
         grid-template-columns: auto 1fr;
         margin-left: 46px;
