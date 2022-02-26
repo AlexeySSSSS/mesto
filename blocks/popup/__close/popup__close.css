@@ -1,13 +1,13 @@
 .popup__close {
+    position: absolute;
+    top: -35px;
+    right: -40px;
     background: url(../../../images/CloseIcon.png);
     width: 32px;
     height: 32px;
     border: none;
-    margin-top: 155px;
     cursor: pointer;
     padding: 0;
-    margin-left: 480px;
-    margin-bottom: 8px;
     background-size: cover;
 }
 
@@ -19,8 +19,6 @@
     .popup__close {
         width: 20px;
         height: 20px;
-        margin-top: 87px;
-        margin-bottom: 16px;
-        margin-left: 262px;
+        right: 0;
     }
 }

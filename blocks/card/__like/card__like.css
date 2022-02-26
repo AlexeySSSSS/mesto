@@ -7,13 +7,10 @@
     margin-right: 5px;
     margin-top: 5px;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .card__like:hover {
     opacity: 0.5;
-}
-
-.card__like:active {
-    background: url(../../../images/Union.png);
-    opacity: 1;
+    transform: scale(1.2);
 }
