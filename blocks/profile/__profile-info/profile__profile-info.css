@@ -1,6 +1,7 @@
 .profile__profile-info {
     display: grid;
     grid-template-rows: auto auto;
+    grid-template-columns: 525px;
     margin-left: 30px;
 }
 

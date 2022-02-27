@@ -32,39 +32,39 @@
         <footer class="footer">
             <p class="footer__copyright">© 2022 Mesto Russia</p>
         </footer>
-        <section class="popup">
+        <section class="popup popup_edit_profile">
             <div class="popup__form">
-                <button class="popup__close"></button>
-                <form class="popup__container" name="form">
+                <button class="popup__close popup__close_edit_profile"></button>
+                <form class="popup__container popup__container_edit_profile" name="form">
                     <h2 class="popup__profile">Редактировать профиль</h2>
-                    <input class="popup__input popup__input_type_name" type="text" name="name" placeholder="Имя">
-                    <input class="popup__input popup__input_type_job" type="text" name="info" placeholder="О себе">
+                    <input class="popup__input popup__input_edit_name" type="text" name="name" placeholder="Имя">
+                    <input class="popup__input popup__input_edit_job" type="text" name="info" placeholder="О себе">
                     <button class="popup__button" type="submit">Сохранить</button>
                 </form>
             </div>
         </section>
-        <section class="popup popup_images_card">
-            <div class="popup__form popup__form_images_card">
-                <button class="popup__close popup__close_images_card"></button>
-                <form class="popup__container popup__container_images_card" name="image">
-                    <h2 class="popup__profile popup__profile_images_card">Новое место</h2>
-                    <input class="popup__input popup__input_images_name" type="text" name="images"
-                        placeholder="Название" required>
-                    <input class="popup__input popup__input_images_job" type="url" name="url"
+        <section class="popup popup_image_card">
+            <div class="popup__form popup__form_image_card">
+                <button class="popup__close popup__close_image_card"></button>
+                <form class="popup__container popup__container_image_card" name="image">
+                    <h2 class="popup__profile popup__profile_image_card">Новое место</h2>
+                    <input class="popup__input popup__input_image_name" type="text" name="image" placeholder="Название"
+                        required>
+                    <input class="popup__input popup__input_image_job" type="url" name="url"
                         placeholder="Ссылка на картинку" required>
-                    <button class="popup__button popup__button_images_card" type="submit">Создать</button>
+                    <button class="popup__button popup__button_image_card" type="submit">Создать</button>
                 </form>
             </div>
         </section>
         <section class="popup popup_big_image">
             <div class="popup__form popup__form_big_image">
                 <button class="popup__close popup__close_big_image"></button>
-                <img class="popup__images">
+                <img class="popup__image">
                 <h2 class="popup__city"></h2>
             </div>
         </section>
     </div>
-    <template id="temp">
+    <template id="template">
         <article class="elements__element card">
             <button class="card__delete"></button>
             <img class="card__item ">
@@ -74,6 +74,7 @@
             </div>
         </article>
     </template>
+    <script src="./scripts/card.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 
