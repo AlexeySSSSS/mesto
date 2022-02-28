@@ -53,9 +53,10 @@ function handleProfileFormSubmit(evt) {
 function createCard(name, link) {
     const templateClone = template.cloneNode(true);
     templateClone.querySelector('.card__text').textContent = name;
-    templateClone.querySelector('.card__item').src = link;
-    templateClone.querySelector('.card__item').alt = name;
-    templateClone.querySelector('.card__item').addEventListener('click', function (evt) {
+    const cardImage = templateClone.querySelector('.card__item');
+    cardImage.src = link;
+    cardImage.alt = name;
+    cardImage.addEventListener('click', function (evt) {
         const linkPopupImage = document.querySelector('.popup__image');
         linkPopupImage.src = evt.target.src;
         linkPopupImage.alt = evt.target.alt;
