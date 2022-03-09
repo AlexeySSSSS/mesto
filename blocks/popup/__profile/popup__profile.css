@@ -6,9 +6,7 @@
     line-height: 29px;
     color: #000000;
     margin-top: 34px;
-    margin-bottom: 48px;
-    margin-right: auto;
-    margin-left: 36px;
+    margin-bottom: 3px;
 }
 
 @media screen and (max-width: 620px) {
@@ -16,8 +14,7 @@
         min-width: 238px;
         font-size: 18px;
         line-height: 22px;
-        margin-top: 25px;
-        margin-bottom: 75px;
-        margin-left: 22px;
+        margin-top: 26px;
+        margin-bottom: 30px;
     }
 }

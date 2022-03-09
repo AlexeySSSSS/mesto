@@ -33,31 +33,41 @@
             <p class="footer__copyright">© 2022 Mesto Russia</p>
         </footer>
         <section class="popup popup_edit_profile">
-            <div class="popup__form">
+            <div class="popup__container">
                 <button class="popup__close popup__close_edit_profile"></button>
-                <form class="popup__container popup__container_edit_profile" name="form">
+                <form class="popup__form popup__form_edit_profile" name="form" novalidate>
                     <h2 class="popup__profile">Редактировать профиль</h2>
-                    <input class="popup__input popup__input_edit_name" type="text" name="name" placeholder="Имя">
-                    <input class="popup__input popup__input_edit_job" type="text" name="info" placeholder="О себе">
+                    <div class="popup__block">
+                        <input id="edit-name" class="popup__input popup__input_edit_name" type="text" name="name"
+                            placeholder="Имя" minlength="2" maxlength="40" required>
+                        <span class="edit-name-error popup__input-error"></span>
+                        <input id="edit-job" class="popup__input popup__input_edit_job" type="text" name="info"
+                            placeholder="О себе" minlength="2" maxlength="200" required>
+                        <span class="edit-job-error popup__input-error"></span>
+                    </div>
                     <button class="popup__button" type="submit">Сохранить</button>
                 </form>
             </div>
         </section>
         <section class="popup popup_image_card">
-            <div class="popup__form popup__form_image_card">
+            <div class="popup__container popup__container_image_card">
                 <button class="popup__close popup__close_image_card"></button>
-                <form class="popup__container popup__container_image_card" name="image">
+                <form class="popup__form popup__form_image_card" name="image" novalidate>
                     <h2 class="popup__profile popup__profile_image_card">Новое место</h2>
-                    <input class="popup__input popup__input_image_name" type="text" name="image" placeholder="Название"
-                        required>
-                    <input class="popup__input popup__input_image_job" type="url" name="url"
-                        placeholder="Ссылка на картинку" required>
+                    <div class="popup__block">
+                        <input id="image-name" class="popup__input popup__input_image_name" type="text" name="image"
+                            placeholder="Название" minlength="1" maxlength="30" required>
+                        <span class="image-name-error popup__input-error"></span>
+                        <input id="image-job" class="popup__input popup__input_image_job" type="url" name="url"
+                            placeholder="Ссылка на картинку" required>
+                        <span class="image-job-error popup__input-error"></span>
+                    </div>
                     <button class="popup__button popup__button_image_card" type="submit">Создать</button>
                 </form>
             </div>
         </section>
         <section class="popup popup_big_image">
-            <div class="popup__form popup__form_big_image">
+            <div class="popup__container popup__container_big_image">
                 <button class="popup__close popup__close_big_image"></button>
                 <img class="popup__image">
                 <h2 class="popup__city"></h2>
@@ -67,7 +77,7 @@
     <template id="template">
         <article class="elements__element card">
             <button class="card__delete"></button>
-            <img class="card__item ">
+            <img class="card__item">
             <div class="card__grid-block">
                 <h2 class="card__text"></h2>
                 <button class="card__like"></button>
@@ -75,6 +85,7 @@
         </article>
     </template>
     <script src="./scripts/card.js"></script>
+    <script src="./scripts/validate.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 
