@@ -1,3 +1,7 @@
+import { Card, initialCards } from './Card.js';
+import { FormValidator, formData } from './FormValidator.js';
+export { openPopupCard };
+
 const documentBody = document.querySelector('.body');
 const modalPopups = document.querySelectorAll('.popup');
 const popupEditProfile = document.querySelector('.popup_edit_profile');
@@ -12,15 +16,18 @@ const nameInput = document.querySelector('.popup__input_edit_name');
 const descriptionInputValue = document.querySelector('.popup__input_edit_job');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
-const template = document.querySelector('#template').content;
 const elements = document.querySelector('.elements');
 const cardNameInputValue = document.querySelector('.popup__input_image_name');
 const cardLinkInputValue = document.querySelector('.popup__input_image_job');
 const buttonPopupCardClose = document.querySelector('.popup__close_big_image');
 const popupCard = document.querySelector('.popup_big_image');
 const linkPopupImage = document.querySelector('.popup__image');
-const inputList = Array.from(popupImageContainer.querySelectorAll(formData.inputSelector));
-const buttonElement = popupImageContainer.querySelector(formData.submitButtonSelector);
+const titlePopupImage = document.querySelector('.popup__city');
+
+const popupImageContainerValidator = new FormValidator(formData, popupImageContainer);
+popupImageContainerValidator.enableValidation();
+const formEditProfileValidator = new FormValidator(formData, formEditProfile);
+formEditProfileValidator.enableValidation();
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
@@ -54,6 +61,13 @@ modalPopups.forEach((evt) => {
     });
 });
 
+function openPopupCard(link, name) {
+    linkPopupImage.src = link;
+    linkPopupImage.alt = name;
+    titlePopupImage.textContent = name;
+    openPopup(popupCard);
+}
+
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
@@ -62,25 +76,8 @@ function handleProfileFormSubmit(evt) {
 }
 
 function createCard(name, link) {
-    const templateClone = template.cloneNode(true);
-    templateClone.querySelector('.card__text').textContent = name;
-    const cardImage = templateClone.querySelector('.card__item');
-    cardImage.src = link;
-    cardImage.alt = name;
-    cardImage.addEventListener('click', function (evt) {
-        linkPopupImage.src = evt.target.src;
-        linkPopupImage.alt = evt.target.alt;
-        const titlePopupImage = document.querySelector('.popup__city');
-        titlePopupImage.textContent = evt.target.alt;
-        openPopup(popupCard);
-    });
-    templateClone.querySelector('.card__delete').addEventListener('click', function (evt) {
-        evt.target.closest('.card').remove();
-    });
-    templateClone.querySelector('.card__like').addEventListener('click', function (evt) {
-        evt.target.classList.toggle('card__like_active');
-    });
-    return templateClone;
+    const cardImage = new Card(name, link, '#template');
+    return cardImage.generateCard();
 }
 
 initialCards.forEach((item) => {
@@ -91,7 +88,7 @@ function handleCardFormSubmit(evt) {
     evt.preventDefault();
     elements.prepend(createCard(cardNameInputValue.value, cardLinkInputValue.value));
     popupImageContainer.reset();
-    toggleButtonState(inputList, buttonElement, formData);
+    popupImageContainerValidator.toggleButtonState();
     closePopup(popupImage);
 }
 

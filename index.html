@@ -55,7 +55,7 @@
                 <form class="popup__form popup__form_image_card" name="image" novalidate>
                     <h2 class="popup__profile popup__profile_image_card">Новое место</h2>
                     <div class="popup__block">
-                        <input id="image-name" class="popup__input popup__input_image_name" type="text" name="image"
+                        <input id="image-name" class="popup__input popup__input_image_name" type="text" name="text"
                             placeholder="Название" minlength="2" maxlength="30" required>
                         <span class="image-name-error popup__input-error"></span>
                         <input id="image-job" class="popup__input popup__input_image_job" type="url" name="url"
@@ -84,9 +84,7 @@
             </div>
         </article>
     </template>
-    <script src="./scripts/card.js"></script>
-    <script src="./scripts/validate.js"></script>
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>

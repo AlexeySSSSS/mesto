@@ -1,3 +1,6 @@
+import { openPopupCard } from './index.js';
+export { Card, initialCards };
+
 const initialCards = [
     {
         name: 'Архыз',
@@ -24,3 +27,47 @@ const initialCards = [
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
 ];
+
+class Card {
+    constructor(name, link, cardSelector) {
+        this._cardLink = link;
+        this._cardName = name;
+        this._cardSelector = cardSelector;
+    }
+
+    _setEventListeners() {
+        this._cardImage.addEventListener('click', () => {
+            openPopupCard(this._cardLink, this._cardName);
+        });
+        this._templateClone.querySelector('.card__delete').addEventListener('click', (evt) => {
+            this._handleDeleteImage(evt);
+        });
+        this._templateClone.querySelector('.card__like').addEventListener('click', (evt) => {
+            this._handleLikeImage(evt);
+        });
+    }
+
+    _getTemplate() {
+        const cardElement = document.querySelector(this._cardSelector).content.querySelector('.card').cloneNode(true);
+        return cardElement;
+    }
+
+    _handleLikeImage(evt) {
+        evt.target.classList.toggle('card__like_active');
+    }
+
+    _handleDeleteImage(evt) {
+        evt.target.closest('.card').remove();
+    }
+
+    generateCard() {
+        this._templateClone = this._getTemplate();
+        this._cardImage = this._templateClone.querySelector('.card__item');
+        this._setEventListeners();
+        this._cardImage.src = this._cardLink;
+        this._cardImage.alt = this._cardName;
+        this._templateClone.querySelector('.card__text').textContent = this._cardName;
+        return this._templateClone;
+    }
+}
+
