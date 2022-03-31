@@ -1,14 +1,4 @@
-export { FormValidator, formData };
-
-const formData = {
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__button',
-    inactiveButtonClass: 'popup__button_disabled',
-    inputErrorClass: 'popup__input_type_error',
-    errorClass: 'popup__input-error_active'
-};
-
-class FormValidator {
+export default class FormValidator {
     constructor(formData, formElement) {
         this._formData = formData;
         this._formElement = formElement;
