@@ -1,16 +1,13 @@
-import { openPopupCard } from './Utils.js';
-
 export default class Card {
-    constructor(name, link, cardSelector) {
+    constructor(name, link, cardSelector, handleCardClick) {
         this._cardLink = link;
         this._cardName = name;
         this._cardSelector = cardSelector;
+        this._handleCardClick = handleCardClick;
     }
 
     _setEventListeners() {
-        this._cardImage.addEventListener('click', () => {
-            openPopupCard(this._cardLink, this._cardName);
-        });
+        this._cardImage.addEventListener('click', () => this._handleCardClick());
         this._templateClone.querySelector('.card__delete').addEventListener('click', (evt) => {
             this._handleDeleteImage(evt);
         });
