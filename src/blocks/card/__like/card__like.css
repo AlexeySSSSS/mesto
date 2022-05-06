@@ -4,10 +4,9 @@
     background: url(../../../images/Vector2.png);
     border: none;
     padding: 0;
-    margin-right: 5px;
-    margin-top: 5px;
     cursor: pointer;
     transition: 0.4s;
+    margin-bottom: 3px;
 }
 
 .card__like:hover {
