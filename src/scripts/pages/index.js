@@ -57,7 +57,7 @@ function createCard(item) {
                 api.deleteImageCard(userCardId)
                     .then(() => {
                         popupDeleteImage.close();
-                        cardImage.DeleteImage();
+                        cardImage.deleteImage();
                     })
                     .catch((err) => {
                         console.log(`Ошибка: ${err}`);

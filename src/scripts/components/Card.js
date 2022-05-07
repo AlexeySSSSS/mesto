@@ -32,7 +32,7 @@ export default class Card {
         return this._cardElement;
     }
 
-    DeleteImage() {
+    deleteImage() {
         this._templateClone.remove();
         this._templateClone = null;
     }
